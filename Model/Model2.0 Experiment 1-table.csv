@@ -1,0 +1,7 @@
+"BehaviorSpace results (NetLogo 6.3.0)"
+"Model2.0.nlogo"
+"Experiment 1"
+"02/22/2023 15:25:44:549 +0100"
+"min-pxcor","max-pxcor","min-pycor","max-pycor"
+"-16","16","-16","16"
+"[run number]","value-oriented-mean","ep-linear?","[step]","count people with [moral-concern-normativity = 1]","count people with [moral-concern-normativity = 1.25]","count people with [moral-concern-normativity = 1.5]","count people with [moral-concern-normativity = 1.75]","count people with [moral-concern-normativity = 2]","count people with [moral-concern-normativity = 2.25]","count people with [moral-concern-normativity = 2.5]","count people with [moral-concern-normativity = 2.75]","count people with [moral-concern-normativity = 3]","mean [moral-concern-normativity] of people with [my-orientation = ""st-otc""]","mean [moral-concern-normativity] of people with [my-orientation = ""otc-se""]","mean [moral-concern-normativity] of people with [my-orientation = ""se-c""]","mean [moral-concern-normativity] of people with [my-orientation = ""c-st""]"
