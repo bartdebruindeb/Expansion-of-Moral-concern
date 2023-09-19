@@ -166,8 +166,8 @@ end
 to setup-person [orientation]
   create-people 1 [
     set color black
-    set shape "circle"
-    set size 0.05
+    set shape "triangle"
+    set size 0.045
     setxy random-xcor random-ycor
     set my-orientation orientation
     setup-cognitive-architecture orientation
@@ -309,26 +309,26 @@ end
 to setup-moral-concern-system
   ask people [
     set reference-group "Ingroup"
-    set shape "we"
-    set my-shape "we"]
+    set shape "triangle"
+    set my-shape "triangle"]
 
 if tipping-scenario = "Shotgun" [
     ask n-of (social-entrepeneurs * total-population) people [
     set reference-group "Outgroup"
-    set shape "they"
+    set shape "square"
     set list-of-people-beyond-ingroup-stage3 (list self)
-    set my-shape "they"
+    set my-shape "square"
       set social-entrepeneur? true
-      set size 0.05]]
+      set size 0.045]]
 
     if tipping-scenario = "Silver Bullets" [
       ask max-n-of (social-entrepeneurs * total-population) people [count meeting-link-neighbors] [
     set reference-group "Outgroup"
-    set shape "they"
+    set shape "square"
     set list-of-people-beyond-ingroup-stage3 (list self)
-    set my-shape "they"
+    set my-shape "square"
       set social-entrepeneur? true
-      set size 0.05]]
+      set size 0.045]]
 
       if tipping-scenario = "Snowball" [
     let sen floor (social-entrepeneurs * total-population)
@@ -336,18 +336,18 @@ if tipping-scenario = "Shotgun" [
     while [sen > 0] [
       ask k [
         set reference-group "Outgroup"
-        set shape "they"
+        set shape "square"
         set list-of-people-beyond-ingroup-stage3 (list self)
-        set my-shape "they"
-        set size 0.05
+        set my-shape "square"
+        set size 0.045
         set social-entrepeneur? true
         ask up-to-n-of sen meeting-link-neighbors [
           set reference-group "Outgroup"
-          set shape "they"
+          set shape "square"
           set social-entrepeneur? true
           set list-of-people-beyond-ingroup-stage3 (list self)
-          set my-shape "they"
-          set size 0.05
+          set my-shape "square"
+          set size 0.045
         ]
         set sen floor (social-entrepeneurs * total-population) - count people with [social-entrepeneur? = true]
         set k min-one-of people with [reference-group = "Ingroup"] [distance myself]
@@ -642,8 +642,8 @@ to weigh-we-vs-they
         set time-in-stage-4 0
         set reference-group "Outgroup"
         set new-outgroupers new-outgroupers + 1
-        set my-shape "they"
-        set shape "they"
+        set my-shape "square"
+        set shape "square"
         set color black
         setup-receptiveness-parameters
         stop
